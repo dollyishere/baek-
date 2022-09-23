@@ -111,7 +111,7 @@ def air_push():
 
 # 방의 세로 길이(R), 방의 가로 길이(C), 순환하는 초(T)를 입력받아 각각 해당하는 변수에 담아줌
 R, C, T = map(int, input().split())
-# 방의 상황을 2차원 배열 room에 담아줌(변수명 room으로 쓸 걸...)
+# 방의 상황을 2차원 배열 room에 담아줌
 room = [list(map(int, input().split())) for _ in range(R)]
 
 # 델타탐색용 리스트 di, dj 제작
