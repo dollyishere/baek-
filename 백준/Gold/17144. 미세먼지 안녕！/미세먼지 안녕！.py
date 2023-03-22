@@ -40,7 +40,7 @@ def fine(room):
     # 모든 변화가 끝난 change를 return해줌
     return change
 
-# 공기청정기의 작동을 함수화 
+# 공기청정기가 작동하는 함수 제작
 # 함수를 불러오는 쪽이 시간이 더 걸리는데다 room를 직접 건드는 것도 괜찮기 때문에(미세먼지 확산의 경우 동시 발생이라 불가) 함수화 굳이 안해도 될지도?
 # 먼저 room를 글로벌 선언해주고, 미리 구해뒀던 공기청정기의 위아래 좌표를 각각 변수 air_top, air_bottom에 할당해줌
 def air_push():
@@ -111,7 +111,7 @@ def air_push():
 
 # 방의 세로 길이(R), 방의 가로 길이(C), 순환하는 초(T)를 입력받아 각각 해당하는 변수에 담아줌
 R, C, T = map(int, input().split())
-# 방의 상황을 2차원 배열 room에 담아줌
+# 방의 상황을 2차원 배열 room에 담아줌(변수명 room으로 쓸 걸...)
 room = [list(map(int, input().split())) for _ in range(R)]
 
 # 델타탐색용 리스트 di, dj 제작
@@ -125,6 +125,7 @@ for i in range(R):
     if room[i][0] == -1:
         air_con.append([i, 0])
         air_con.append([i+1, 0])
+        flag = False
         break
 
 # for문을 이용해 T초만큼 미세먼지 확산과 공기청정기 작동을 차례대로 진행함
