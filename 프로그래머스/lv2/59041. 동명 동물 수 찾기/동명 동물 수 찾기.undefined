@@ -1,0 +1,8 @@
+-- 코드를 입력하세요
+SELECT NAME, COUNT(NAME) AS 'COUNT'
+FROM ANIMAL_INS
+# 이름으로 묶어줌
+GROUP BY NAME
+# 이름 없을 시 제외
+HAVING COUNT(NAME) > 1
+ORDER BY NAME
