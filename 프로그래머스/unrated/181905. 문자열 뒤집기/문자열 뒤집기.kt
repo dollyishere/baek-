@@ -1,0 +1,9 @@
+class Solution {
+    fun solution(my_string: String, s: Int, e: Int): String {
+        var answer: String = ""
+        
+        answer = my_string.slice(0 until s) + my_string.slice(s until e+1).reversed() + my_string.slice(e+1 until my_string.length)
+        
+        return answer
+    }
+}
